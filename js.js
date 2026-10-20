@@ -4,7 +4,7 @@ let compScore=0;
 const selection=document.querySelectorAll(".selections");
 
 
-const showwinner =(userWin) =>{
+const showWinner =(userWin) =>{
     if (userWin){
         console.log("You Win")
     }
@@ -12,9 +12,12 @@ const showwinner =(userWin) =>{
         console.log("You Lost");
     }
 }
+
+
 const drawGame=() =>{
     console.log("Game was draw")
 }
+
 const genCompchoice=()=>{
     const option=["rock", "paper", "scissors"]
     const random=Math.floor(Math.random()*3) //Random value genetate
@@ -35,16 +38,16 @@ const playGame=(userChoice) =>{
             userwin=compChoice=="paper" ?false:true;
             
         }
-        elseif(userchoice=="paper"){
+        else if(userChoice=="paper"){
             //rock,scissior
-            userwin=compChoice=="secissor" ?false:true;
+            userwin=compChoice=="scissors" ?false:true;
 
         }
         else{
             //
-            userWin=compChoice=="rock" ?false:true;
+            userwin=compChoice=="rock" ?false:true;
         }
-        showWinner(userWin);
+        showWinner(userwin);
      }
 }
 
