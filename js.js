@@ -2,20 +2,30 @@ let userScore=0;
 let compScore=0;
 
 const selection=document.querySelectorAll(".selections");
-
+const msg=document.querySelector("#msg");
+const userScorepara=document.querySelector("#your-score");
+const compScorepara=document.querySelector("#comp-score");
 
 const showWinner =(userWin) =>{
     if (userWin){
-        console.log("You Win")
+       userScore++;
+       userScorepara.innerText=userScore;
+        msg.innerText="You Win 🥳";
+        msg.style.backgroundColor="green";
     }
     else{
-        console.log("You Lost");
+        compScore++;
+        compScorepara.innerText=compScore;
+        msg.innerText="You Lose 😔";
+        msg.style.backgroundColor="red";
     }
 }
 
 
 const drawGame=() =>{
-    console.log("Game was draw")
+    console.log("Game was draw");
+    msg.innerText="It's Draw 🤝 Play Again";
+    msg.style.backgroundColor="black";
 }
 
 const genCompchoice=()=>{
