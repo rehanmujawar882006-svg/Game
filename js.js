@@ -1,6 +1,11 @@
 let userScore=0;
 let compScore=0;
 
+const selection=document.querySelectorAll(".selections");
+const msg=document.querySelector("#msg");
+const userScorepara=document.querySelector("#your-score");
+const compScorepara=document.querySelector("#comp-score");
+
 const showWinner =(userWin) =>{
     if (userWin){
        userScore++;
