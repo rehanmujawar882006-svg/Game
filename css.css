@@ -58,3 +58,8 @@ img{
    padding:1rem;
    border-radius: 1rem;
 }
+.reset-button{
+    margin-top: 20px;
+    background: hwb(0 0% 0%)(0 0% 0%)(0 0% 0%);
+    color:white;
+}
